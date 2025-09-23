@@ -1,61 +1,9 @@
 body, h1, h2, h3, h4, td, th, p, ul, li {
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-<h1 style="font-family: Arial, Helvetica, sans-serif; color: #6699cc; font-size: 2em; font-weight: bold;" >
-Divya Saxena
-</h1 >
-
-table#tlayout {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: #fff;
-    border-spacing: 0;
-    box-shadow: 0 2px 10px #e0e0e0;
-    min-height: 100vh;
-}
-
-#layout-menu {
-    width: 220px;
-    background: #e6ecf5;
-    padding: 18px 4px 18px 4px;
-    vertical-align: top;
-    border-right: 2px solid #d6dae2;
-    min-height: 100vh;
-    font-size: 1.08em;
-}
-
-    #layout-menu img {
-        max-width: 100%;
-        margin-bottom: 5px;
-        border-radius: 9px;
-    }
-
-    #layout-menu a {
-        display: block;
-        color: #1d3874;
-        text-decoration: none;
-        margin: 9px 0;
-        font-weight: 500;
-        padding: 7px 0 7px 10px;
-        border-radius: 7px;
-        transition: background 0.18s, color 0.18s;
-        font-size: 1em;
-    }
-
-        #layout-menu a.current,
-        #layout-menu a:hover {
-            background: #d2def6;
-            color: #0d2256;
-            font-weight: 700;
-        }
-
-.menu-item {
-    margin-top: 13px;
-    margin-bottom: 9px;
-}
-
+/* MAIN HEADER */
 h1 {
     font-size: 2.1em;
     margin-bottom: 2px;
@@ -79,36 +27,100 @@ h3 {
     font-weight: 600;
 }
 
-
-
-ul li {
-    margin-bottom: 120px;
-    margin-top: 15px;
+/* TABLE LAYOUT */
+table#tlayout {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-spacing: 0;
+    box-shadow: 0 2px 10px #e0e0e0;
+    min-height: 100vh;
 }
 
+/* SIDEBAR MENU */
+#layout-menu {
+    width: 220px;
+    background: #e6ecf5;
+    padding: 18px 4px 18px 4px;
+    vertical-align: top;
+    border-right: 2px solid #d6dae2;
+    min-height: 100vh;
+    font-size: 1.08em;
+}
+#layout-menu img {
+    max-width: 100%;
+    margin-bottom: 5px;
+    border-radius: 9px;
+}
+#layout-menu a {
+    display: block;
+    color: #1d3874;
+    text-decoration: none;
+    margin: 9px 0;
+    font-weight: 500;
+    padding: 7px 0 7px 10px;
+    border-radius: 7px;
+    transition: background 0.18s, color 0.18s;
+    font-size: 1em;
+}
+#layout-menu a.current,
+#layout-menu a:hover {
+    background: #d2def6;
+    color: #0d2256;
+    font-weight: 700;
+}
+
+/* Responsive MOBILE menu (dropdown) — add this to your HTML for mobile if desired */
+/*
+#mobile-menu {
+    display: none;
+    padding: 10px 0;
+}
+*/
+
+/* MENU ITEM spacing */
+.menu-item {
+    margin-top: 13px;
+    margin-bottom: 9px;
+}
+
+/* LISTS — Responsive, clean bullets */
+ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    list-style-type: disc;
+    padding-left: 16px;
+}
+li {
+    margin-bottom: 10px;
+    margin-top: 0px; /* avoid huge space between bullets */
+}
+
+/* IMAGE TABLE (profile) */
 .imgtable {
     margin-bottom: 18px;
     width: 100%;
 }
+.imgtable td {
+    vertical-align: top;
+    padding-right: 13px;
+}
+.imgtable img {
+    border-radius: 50%;
+    border: 4px solid #bbb5b5;
+    max-width: 160px;
+    height: auto;
+}
 
-    .imgtable td {
-        vertical-align: top;
-        padding-right: 13px;
-    }
-
-    .imgtable img {
-        border-radius: 50%;
-        border: 4px solid #bbb5b5;
-    }
-
+/* BUTTONS */
 button {
     background: #1d3874;
     color: #fff;
     border: none;
-    padding: 7px 7px;
-    margin-top: 2px;
-    margin-right: 10px;
-    
+    padding: 7px 16px;
+    margin-top: 8px;
+    margin-right: 8px;
     border-radius: 7px;
     font-size: 1em;
     cursor: pointer;
@@ -117,29 +129,28 @@ button {
     display: inline-flex;
     align-items: center;
 }
+button i {
+    margin-right: 7px;
+    font-size: 1.15em;
+}
+button:hover {
+    background: #16305f;
+}
 
-    button i {
-        margin-right: 0px;
-        font-size: 1.15em;
-        margin-left: 0px;
-        align-items: center;
-    }
-
-    button:hover {
-        background: #16305f;
-    }
-
+/* HORIZONTAL RULES */
 hr {
     border: none;
     border-top: 1px solid #c7d6e3;
     margin: 36px 0 30px 0;
 }
 
+/* MAIN CONTENT AREA */
 #layout-content {
     padding: 35px 44px 35px 44px;
     min-width: 440px;
 }
 
+/* NEWS STYLES */
 .latest-news {
     background-color: #e6edfa;
     padding: 12px 17px 9px 12px;
@@ -149,58 +160,48 @@ hr {
     border-left: 5px solid #a3baf3;
     text-align: justify;
 }
-
-    .latest-news ul {
-        list-style-type: disc;
-        margin-top: 10px;
-        margin-left:0px;
-    }
-
-    .latest-news li {
-        margin-bottom: 7px;
-        font-size: 1em;
-    }
-
-ul {
-    margin-top: 10px;
+.latest-news ul {
     list-style-type: disc;
-    margin-left: 20px; /* Adds indentation for clarity */
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+.latest-news li {
+    margin-bottom: 7px;
+    font-size: 1em;
 }
 
+/* CONTACT */
 #contact {
     margin-top: 31px;
     font-size: 1em;
 }
-
-    #contact a {
-        color: #1b3577;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-        #contact a:hover {
-            color: #124086;
-            text-decoration: underline;
-        }
-
+#contact a {
+    color: #1b3577;
+    text-decoration: none;
+    font-weight: 600;
+}
+#contact a:hover {
+    color: #124086;
+    text-decoration: underline;
+}
 small {
     color: #8c93a1;
     font-size: 0.97em;
 }
 
+/* NEWS LIST (date/news format) */
 .news-list {
     max-width: 700px;
     margin: 0 auto;
     padding: 0;
 }
-
 .news-item {
     display: flex;
     align-items: flex-start;
     padding: 8px 0;
     border-bottom: 1px solid #eee;
 }
-
 .news-date {
     min-width: 80px;
     color: #222;
@@ -211,21 +212,11 @@ small {
     text-align: right;
     flex-shrink: 0;
 }
-
 .news-detail {
     flex: 1;
     font-family: 'Georgia', serif;
     color: #222;
 }
-
-.latest-news tr {
-    height: 30px; /* increases row height for spacing */
-}
-
-.latest-news td {
-    padding-bottom: 12px; /* adds space below each cell */
-}
-
 
 .publications-section li, .publications-section ol {
     font-size: 1em;
@@ -234,13 +225,10 @@ small {
     margin-bottom: 10px;
 }
 
-
-
-/* Social sidebar images/icons */
+/* SIDEBAR SOCIAL ICONS */
 #layout-menu img[alt*="Logo"], #layout-menu img[alt*="logo"] {
     margin: 18px 0 14px 0;
 }
-
 #layout-menu img[alt*="icon"], #layout-menu img[alt*="Icon"] {
     display: inline-block;
     width: 38px;
@@ -250,38 +238,41 @@ small {
     border: none;
 }
 
-/* Responsive tweaks */
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 990px) {
-    /* #layout-menu {
+    #layout-menu {
         display: none;
-    } */
-
+    }
     #layout-content {
         padding: 18px 5vw;
         min-width: unset;
     }
-
     table#tlayout {
         width: 98vw;
     }
+    /* Optional: Show mobile menu if you have one */
+    /* #mobile-menu { display: block; } */
 }
 
-
-
+@media (max-width: 700px) {
+    body, #layout-content {
+        font-size: 15px;
+        padding: 7px;
+    }
     h1 {
         font-size: 1.3em;
     }
-
     h2 {
         font-size: 1em;
     }
-
     .imgtable img {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
     }
-
     table#tlayout, .imgtable {
         width: 100%;
+    }
+    #layout-content {
+        padding: 6vw 2vw;
     }
 }
