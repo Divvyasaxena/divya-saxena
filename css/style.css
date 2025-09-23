@@ -253,7 +253,7 @@ small {
 /* Responsive tweaks */
 @media (max-width: 990px) {
     #layout-menu {
-        display: none;
+        <!-- display: none; -->
     }
 
     #layout-content {
