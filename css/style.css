@@ -185,5 +185,37 @@ ul {
     height: 30px; /* increases row height for spacing */
 }
 
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 38px;
+  margin-bottom: 30px;
+}
+
+#contact {
+  flex: 1 1 320px;
+  min-width: 270px;
+  max-width: 420px;
+}
+
+.contact-map {
+  flex: 0 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 700px) {
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .contact-map {
+    justify-content: flex-start;
+    margin-top: 14px;
+  }
+}
 
 
